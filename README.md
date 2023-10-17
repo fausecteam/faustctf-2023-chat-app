@@ -1,14 +1,9 @@
-# Chat App
+chat-app
+========
 
-Our server code is implemented in [server](/server) and the Android application in [application](/application/).
+This is the source code for the "chat-app" service from [FAUST CTF 2023](https://2023.faustctf.net).
 
-## Challenge Idea
+**As it was written for a CTF service, the code is deliberately insecure and contains exploitable bugs. It
+is provided for educational purposes only, do not even think about (re-) using it for anything productive!**
 
-The main idea of this challenge is based on a flaw in MySQL as its string compare function is not case sensitive.
-This means, a malicious actor can create anohter user with the same username as the flag user but one character capalized to then request all chats from this flag user.
-
-## CI Example for a service using docker-compose
-
-The .gitlab-ci.yml in this repo builds and pushes all possible images (docker-compose.yml is parsed and used to call kaniko).
-
-In the vulnbox build process, the compose file is used to pull all images and include them in the vm.
+The code is released under the ISC License, see LICENSE.txt for details.
